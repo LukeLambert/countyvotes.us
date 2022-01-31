@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    init: true
+    volumes:
+      - .:/app
+    ports:
+      - 8080:8080
+    environment:
+      - ENV=development
+  sass:
+    build:
+      context: .
+      dockerfile: ./sass.Dockerfile
+    init: true
+    volumes:
+      - ./static:/data

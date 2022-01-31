@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <h2>Counties &amp; County Equivalents</h2>
+    {% for state in states.values() %}
+        {% if state.counties %}
+            <h3>{{ state.name }}</h3>
+            <p>
+                {% for county in state.counties %}
+                    {% if not loop.first %}&bull;{% endif %}
+                    <a href="{{ url_for('county_view', fips_code=county.fips_code) }}">{{ county.name }}</a>
+                {% endfor %}
+            </p>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

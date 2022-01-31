@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block body_class %}home{% endblock %}
+
+{% block header %}
+    <h1>
+        <div class="title">
+            U.S. Presidential<br>
+            Election Results<br>
+            by County
+        </div>
+        <div class="subtitle">{{ min_year }}-{{ max_year }}</div>
+    </h1>
+    <svg class="curve" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 26">
+        <path class="st0" d="M512,26H0V0c0,0,128.5,24,256.5,24S512,0,512,0V26z"/>
+    </svg>
+
+{% endblock %}
+
+{% block main %}
+    <div class="search">
+        <input id="search" type="text" dir="ltr" autocorrect="off" autocomplete="off" autocapitalize="on"
+               maxlength="2048" tabindex="1">
+    </div>
+    <div class="about">
+        <p>
+            This site allows you to observe the voting trends of U.S. counties by charting the results of presidential
+            elections from {{ min_year }} to {{ max_year }}.
+            In the search field above, enter the name of a county or county equivalent (e.g. parish or electoral
+            district).
+            You can also <a href="{{ url_for('counties_view') }}">browse the full list</a> of counties or get started
+            with one of these interesting examples:
+        </p>
+        <ul>
+            {% for county in interesting %}
+                <li><a href="{{ url_for('county_view', fips_code=county.fips_code) }}">{{ county.name }}, {{ county.state }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
