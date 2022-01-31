@@ -110,10 +110,11 @@ def robots_txt():
     return flask.Response(content, mimetype='text/plain')
 
 
-@app.route('/404.html')
 @app.errorhandler(404)
-def error_404_view(e):
-    return flask.render_template('404.html'), 404
+@app.route('/404.html')
+def error_404_view(error=None):
+    status = error.code if error else None
+    return flask.render_template('404.html'), status
 
 
 @app.context_processor
