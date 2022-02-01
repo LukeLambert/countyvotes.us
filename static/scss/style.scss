@@ -247,9 +247,8 @@ footer {
 .home {
   header {
     position: relative;
-    height: 50vh;
     box-sizing: border-box;
-    padding: var(--padding-size) 0;
+    padding: 10px 0 30px 0;
     background-color: $gray-900;
     background-image: (
             radial-gradient(circle at top left, rgba($blue-900, 0.75), transparent),
@@ -258,6 +257,7 @@ footer {
 
     .container {
       height: 100%;
+      padding: 10% 0;
       max-width: none;
       background-image: url("../img/map.png");
       background-size: contain;
@@ -351,7 +351,12 @@ footer {
 
   .home {
     header {
+      min-height: 50vh;
       padding: 30px 0;
+
+      .container {
+        padding: 0;
+      }
 
       h1 {
         font-size: 3.5em;
