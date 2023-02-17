@@ -1,6 +1,8 @@
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
+ENV = os.environ.get('ENV')
 DATA_DIR = BASE_DIR / 'data'
 RESULTS_FILE = DATA_DIR / 'results.csv'
 COUNTIES_FILE = DATA_DIR / 'counties.csv'
@@ -13,11 +15,11 @@ PARTIES = [
 ]
 
 INTERESTING = [
-    4013, # Maricopa County, Arizona
-    39099, # Mahoning County, Ohio
-    13135, # Gwinnett County, Georgia
-    12086, # Miami-Dade County, Florida
-    48215, # Hidalgo County, Texas
+    4013,  # Maricopa County, Arizona
+    39099,  # Mahoning County, Ohio
+    13135,  # Gwinnett County, Georgia
+    12086,  # Miami-Dade County, Florida
+    48215,  # Hidalgo County, Texas
 ]
 
 COUNTY_OVERRIDES = {

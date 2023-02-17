@@ -123,6 +123,7 @@ def context_processor():
         'intcomma': humanize.intcomma,
         'min_year': min(app.years),
         'max_year': max(app.years),
+        'env': settings.ENV,
     }
 
 
