@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
     <title>{% block title %}U.S. Presidential Election Results{% endblock %}</title>
     <meta name="description" content="U.S. presidential election results from {{ min_year }} to {{ max_year }}">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
-    <link rel="icon" href="{{ url_for('static',filename='img/favicon.svg') }}">
-    <link rel="apple-touch-icon" href="{{ url_for('static',filename='img/icon.png') }}">
-    <meta property="og:image" content="{{ url_for('static',filename='img/og.jpg') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/icon.png') }}">
+    <meta property="og:image" content="{{ url_for('static', filename='img/og.jpg') }}">
     {% block extrahead %}{% endblock %}
 </head>
 <body class="{% block body_class %}{% endblock %}">
