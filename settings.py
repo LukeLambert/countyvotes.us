@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
-ENV = os.environ.get('ENV')
+ENV = os.environ.get('ENV', 'production')
 DATA_DIR = BASE_DIR / 'data'
 RESULTS_FILE = DATA_DIR / 'results.csv'
 COUNTIES_FILE = DATA_DIR / 'counties.csv'
