@@ -12,11 +12,11 @@
   --color-chart-text: #{$gray-900};
   --color-chart-gridlines: #{$gray-200};
   --color-chart-democrat: #{$chart-blue};
-  --color-chart-democrat-bg: #{rgba($chart-blue, 0.5)};
+  --color-chart-democrat-bg: #{rgba($chart-blue, 0.33)};
   --color-chart-republican: #{$chart-red};
-  --color-chart-republican-bg: #{rgba($chart-red, 0.5)};
+  --color-chart-republican-bg: #{rgba($chart-red, 0.33)};
   --color-chart-other: #{$chart-yellow};
-  --color-chart-other-bg: #{rgba($chart-yellow, 0.5)};
+  --color-chart-other-bg: #{rgba($chart-yellow, 0.33)};
   --padding-size: 15px;
 }
 
