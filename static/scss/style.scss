@@ -11,22 +11,25 @@
 :root {
   --color-chart-text: #{$gray-900};
   --color-chart-gridlines: #{$gray-200};
-  --color-chart-democrat: #{$blue-400};
-  --color-chart-republican: #{$red-400};
-  --color-chart-other: #{$yellow-400};
+  --color-chart-democrat: #{$chart-blue};
+  --color-chart-democrat-bg: #{rgba($chart-blue, 0.5)};
+  --color-chart-republican: #{$chart-red};
+  --color-chart-republican-bg: #{rgba($chart-red, 0.5)};
+  --color-chart-other: #{$chart-yellow};
+  --color-chart-other-bg: #{rgba($chart-yellow, 0.5)};
   --padding-size: 15px;
 }
 
 *.bg-democrat {
-  background-color: #{$blue-100};
+  background-color: var(--color-chart-democrat-bg);
 }
 
 *.bg-republican {
-  background-color: #{$red-100};
+  background-color: var(--color-chart-republican-bg);
 }
 
 *.bg-other {
-  background-color: #{$yellow-100};
+  background-color: var(--color-chart-other-bg);
 }
 
 html, body {
@@ -249,11 +252,7 @@ footer {
     position: relative;
     box-sizing: border-box;
     padding: 10px 0 30px 0;
-    background-color: $gray-900;
-    background-image: (
-            radial-gradient(circle at top left, rgba($blue-900, 0.75), transparent),
-            radial-gradient(circle at bottom right, rgba($red-900, 0.75), transparent)
-    );
+    background-color: $gray-700;
 
     .container {
       height: 100%;

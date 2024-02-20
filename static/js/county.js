@@ -5,8 +5,11 @@
         text: style.getPropertyValue('--color-chart-text'),
         gridlines: style.getPropertyValue('--color-chart-gridlines'),
         democrat: style.getPropertyValue('--color-chart-democrat'),
+        democratBg: style.getPropertyValue('--color-chart-democrat-bg'),
         republican: style.getPropertyValue('--color-chart-republican'),
+        republicanBg: style.getPropertyValue('--color-chart-republican-bg'),
         other: style.getPropertyValue('--color-chart-other'),
+        otherBg: style.getPropertyValue('--color-chart-other-bg'),
     }
     const labels = results[0].shares.map(share => share.year)
     const scaleOptions = {
@@ -44,7 +47,9 @@
                 return {
                     label: result.name,
                     data: result.shares.map(share => share.votes),
-                    backgroundColor: colors[result.code]
+                    borderWidth: 1,
+                    backgroundColor: colors[result.code + 'Bg'],
+                    borderColor: colors[result.code],
                 }
             })
         },
@@ -59,7 +64,9 @@
                 return {
                     label: result.name,
                     data: result.shares.map(share => share.votes / share.total * 100),
-                    backgroundColor: colors[result.code]
+                    borderWidth: 1,
+                    backgroundColor: colors[result.code + 'Bg'],
+                    borderColor: colors[result.code],
                 }
             })
         },
