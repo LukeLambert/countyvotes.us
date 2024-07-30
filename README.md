@@ -1,6 +1,7 @@
 # CountyVotes.us
 
-This site allows you to observe the voting trends of U.S. counties by charting the results of presidential elections over time.
+This site lets you track how U.S. counties have voted in presidential elections over the years.
+
 ## Sources
 
 - Election results data: [MIT Election Data and Science Lab](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ)
