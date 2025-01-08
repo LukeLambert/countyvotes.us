@@ -4,9 +4,9 @@ humanize==4.11.0
 natsort==8.4.0
 ## The following requirements were added by pip freeze:
 blinker==1.9.0
-click==8.1.7
+click==8.1.8
 itsdangerous==2.2.0
-Jinja2==3.1.4
+Jinja2==3.1.5
 MarkupSafe==3.0.2
 setuptools==72.2.0
 Werkzeug==3.1.3
